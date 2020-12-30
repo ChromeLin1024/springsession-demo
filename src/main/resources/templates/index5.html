@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" media="all"  href="../../css/gtvg.css"  th:href="@{/css/gtvg.css}" />
+   <!-- <link rel="stylesheet" type="text/css" media="all" href="/css/gtvg.css"  />-->
+</head>
+<body>
+
+    <h1 th:text="${message}"></h1>
+
+    <h1 th:if="${flag == 'yes'}">条件成立</h1>
+    <!--条件不成立-->
+    <h1 th:if="${flag =='yes'}"> 条件不成立</h1>
+
+    <!-- switch选择语句 -->
+    <div th:switch="${menu}">
+        <p th:case="'admin'"> admin</p>
+        <p th:case="${manager}">manager</p>
+    </div>
+    <div id="d1"></div>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1 th:text="${message}"></h1>
+
+    <table border="1">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>age</th>
+            <th>index</th>
+        </tr>
+        <tr th:each="user,iterStar:${list}">
+            <th th:text="${user.id}">id</th>
+            <th th:text="${user.name}">id</th>
+            <th th:text="${user.age}">id</th>
+            <th th:text="${iterStar.index}">id</th>
+        </tr>
+    </table>
+
+</body>
+</html>

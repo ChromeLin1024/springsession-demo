@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/gtvg.css" th:href="@{/css/gtvg.css}"/>
+    <!-- <link rel="stylesheet" type="text/css" media="all" href="/css/gtvg.css"  />-->
+</head>
+<body>
+
+        <!-- 把片段的内容插入到当前位置 -->
+        <div th:insert="~{text :: copy}"></div>
+        </br>
+        <!-- 使用片段的内容替换当前标签 -->
+        <div th:replace="~{text :: copy}"></div>
+        </br>
+        <!-- 保留自己的主标签，不要片段的主标签 -->
+        <div th:include="~{text :: copy}"></div>
+</body>
+</body>
+</html>
